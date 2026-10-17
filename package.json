@@ -1,0 +1,61 @@
+{
+  "name": "@askeleven/do-not-contact",
+  "version": "0.1.0",
+  "description": "One do-not-contact list for every channel. A STOP by text, an email unsubscribe or a \"remove me\" reply blocks that person everywhere. Stores keyed hashes, never addresses. Library, CLI and MCP server. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AskEleven",
+  "homepage": "https://github.com/askeleven/do-not-contact",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askeleven/do-not-contact.git"
+  },
+  "bugs": {
+    "url": "https://github.com/askeleven/do-not-contact/issues"
+  },
+  "keywords": [
+    "do-not-contact",
+    "suppression-list",
+    "opt-out",
+    "unsubscribe",
+    "sms",
+    "stop",
+    "tcpa",
+    "can-spam",
+    "gdpr",
+    "mcp",
+    "mcp-server",
+    "ai-agents"
+  ],
+  "bin": {
+    "do-not-contact": "bin/cli.js",
+    "dnc": "bin/cli.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build:types": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build:types && npm test"
+  },
+  "types": "types/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^5.9.3"
+  }
+}
