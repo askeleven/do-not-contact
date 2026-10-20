@@ -61,7 +61,7 @@ code, or your agent, has to ask it before every message, and listen.
 looks anyone up.
 
 **It does not read every language.** The keywords and phrases are English. A message it does
-not recognise records nothing; record those with `optout`.
+not recognize records nothing; record those with `optout`.
 
 **It is not legal advice.** The FCC's 2025 revocation rule treats stop, quit, end, revoke,
 opt out, cancel and unsubscribe as valid ways to revoke consent to texts, and allows "any
