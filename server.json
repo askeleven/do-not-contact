@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.askeleven/do-not-contact",
+  "title": "Do Not Contact",
+  "description": "One opt-out list across email, SMS and calls. Stores keyed hashes, never addresses.",
+  "repository": {
+    "url": "https://github.com/askeleven/do-not-contact",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/askeleven/do-not-contact",
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@askeleven/do-not-contact",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        },
+        {
+          "type": "named",
+          "name": "--list",
+          "description": "Path to the JSONL list file",
+          "isRequired": true,
+          "format": "filepath",
+          "valueHint": "/path/to/dnc.jsonl"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "DNC_SECRET",
+          "description": "Secret used to key the stored hashes",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "DNC_DEFAULT_COUNTRY",
+          "description": "Default country calling code for phone numbers, such as 1",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}
